@@ -26,7 +26,8 @@ class Day1
             return $result + $this->testPt2Invocation($result);
     }
 
-    public function computeResult(array $testCases): int {
+    public function computeResult(string $testCases): int {
+        $testCases = explode("\n", $testCases);
         $result = 0;
         foreach ($testCases as $testCase) {
             $calculation = $this->Calculate((int)$testCase);
@@ -35,7 +36,8 @@ class Day1
         return $result;
     }
 
-    public function computeResultPt2(array $testCases): int {
+    public function computeResultPt2(string $testCases): int {
+        $testCases = explode("\n", $testCases);
         $result = 0;
         foreach ($testCases as $testCase) {
             $calculation = $this->testPt2Invocation((int)$testCase);

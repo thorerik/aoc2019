@@ -47,11 +47,8 @@ class Day2
         return implode(',', $this->code);
     }
 
-    public function computeResult(array $testCases): int {
-        throw new NotImplementedException();
-        $result = 0;
-
-        return $result;
+    public function computeResult(string $testCase): string {
+        return $this->compute($testCase);
     }
 
     public function computeResultPt2(array $testCases): int {

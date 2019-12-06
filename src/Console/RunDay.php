@@ -54,6 +54,6 @@ class RunDay extends Command
     public static function readFile($file) {
         $input = file_get_contents(__DIR__ . '/../../' . $file);
         $input = trim($input);
-        return explode("\n", $input);
+        return $input;
     }
 }
