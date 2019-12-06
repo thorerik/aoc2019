@@ -37,7 +37,7 @@ class Day1Test extends \PHPUnit\Framework\TestCase
     }
 
     public function testPt1FinalSolution() {
-        $testCases = \Thor\AdventOfCode\Console\RunDay::readFile(__DIR__ . '/../../Inputs/day1.txt');
+        $testCases = \Thor\AdventOfCode\Console\RunDay::readFile('./Inputs/day1.txt');
         $day1 = new \Thor\AdventOfCode\Days\Day1;
         $result = $day1->computeResult($testCases);
 
@@ -54,5 +54,13 @@ class Day1Test extends \PHPUnit\Framework\TestCase
 
     public function testPt2Example3Test() {
         $this->invokePt2(100756,50346);
+    }
+
+    public function testPt2FinalSolution() {
+        $testCases = \Thor\AdventOfCode\Console\RunDay::readFile('./Inputs/day1.txt');
+        $day1 = new \Thor\AdventOfCode\Days\Day1;
+        $result = $day1->computeResultPt2($testCases);
+
+        $this->assertEquals(4940441, $result);
     }
 }
