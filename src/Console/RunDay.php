@@ -45,7 +45,7 @@ class RunDay extends Command
     }
 
 
-    public function readFile($file) {
+    public static function readFile($file) {
         $input = file_get_contents($file);
         $input = trim($input);
         return explode("\n", $input);
