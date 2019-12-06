@@ -4,7 +4,8 @@
         "ext-bcmath": "*",
         "phpunit/phpunit": "^8.4",
         "league/flysystem": "^1.0",
-        "symfony/console": "^5.0"
+        "symfony/console": "^5.0",
+        "psy/psysh": "^0.9.11"
     },
     "autoload": {
         "psr-4": {
