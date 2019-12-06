@@ -11,7 +11,7 @@ namespace Thor\AdventOfCode\Days;
 
 use Thor\AdventOfCode\Exceptions\NotImplementedException;
 
-class Day
+class Day1
 {
     public function computeResult(array $testCases): int {
         throw new NotImplementedException();
