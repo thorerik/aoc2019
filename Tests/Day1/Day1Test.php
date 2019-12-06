@@ -8,33 +8,51 @@
 
 class Day1Test extends \PHPUnit\Framework\TestCase
 {
-    private function invoke($mass, $expected) {
+    private function invokePt1($mass, $expected) {
         $fuel = new \Thor\AdventOfCode\Days\Day1();
         $result = $fuel->Calculate($mass);
         $this->assertEquals($expected,$result);
     }
 
-    public function testExample1Test() {
-        $this->invoke(12,2);
+    private function invokePt2($mass, $expected) {
+        $fuel = new \Thor\AdventOfCode\Days\Day1();
+        $result = $fuel->testPt2Invocation($mass);
+        $this->assertEquals($expected,$result);
     }
 
-    public function testExample2Test() {
-        $this->invoke(14,2);
+    public function testPt1Example1Test() {
+        $this->invokePt1(12,2);
     }
 
-    public function testExample3Test() {
-        $this->invoke(1969, 654);
+    public function testPt1Example2Test() {
+        $this->invokePt1(14,2);
     }
 
-    public function testExample4Test() {
-        $this->invoke(100756, 33583);
+    public function testPt1Example3Test() {
+        $this->invokePt1(1969, 654);
     }
 
-    public function testFinalSolution() {
+    public function testPt1Example4Test() {
+        $this->invokePt1(100756, 33583);
+    }
+
+    public function testPt1FinalSolution() {
         $testCases = \Thor\AdventOfCode\Console\RunDay::readFile(__DIR__ . '/../../Inputs/day1.txt');
         $day1 = new \Thor\AdventOfCode\Days\Day1;
         $result = $day1->computeResult($testCases);
 
         $this->assertEquals(3295539, $result);
+    }
+
+    public function testPt2Example1Test() {
+        $this->invokePt2(14,2);
+    }
+
+    public function testPt2Example2Test() {
+        $this->invokePt2(1969,966);
+    }
+
+    public function testPt2Example3Test() {
+        $this->invokePt2(100756,50346);
     }
 }
