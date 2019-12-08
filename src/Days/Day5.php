@@ -36,18 +36,24 @@ class Day5
                 $opcode = (int)($instruction[$length-1] . $instruction[$length]);
             else
                 $opcode = (int)$instruction;
+            
             if ($length > 1) {
-                $param1mode = (int)@$instruction[$length-2];
+                $param1mode = (int)$instruction[$length-2];
             } else {
                 $param1mode = 0;
             }
+
             if ($length > 2) {
-                $param2mode = (int)@$instruction[$length-3];
+                $param2mode = (int)$instruction[$length-3];
             } else {
                 $param2mode = 0;
             }
+
+            // Implemented but not used at the moment since
+            // param 3 for the time being is only return val
+            // May be used in the future
             if ($length > 3) {
-                $param3mode = (int)@$instruction[$length-4];
+                $param3mode = (int)$instruction[$length-4];
             } else {
                 $param3mode = 0;
             }
