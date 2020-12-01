@@ -9,6 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AoC 2020.tests", "AoC 2020.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FC694F8C-2CC6-4A6D-AD31-1B0C994D9C86}"
 	ProjectSection(SolutionItems) = preProject
+		AoC 2020\.editorconfig = AoC 2020\.editorconfig
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
