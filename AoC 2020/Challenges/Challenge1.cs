@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AoC_2020
+namespace AoC_2020.Challenges
 {
     public class Challenge1 : Challenge
     {
-        public int task1()
+        public override int task1()
         {
             foreach (var e1 in input)
             {
@@ -22,7 +22,7 @@ namespace AoC_2020
             }
             return 1;
         }
-        public int task2()
+        public override int task2()
         {
             foreach (var e1 in input)
             {

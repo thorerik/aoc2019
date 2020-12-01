@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Linq;
+using System.Reflection;
+using AoC_2020.Challenges;
 
 namespace AoC_2020
 {
@@ -6,13 +9,23 @@ namespace AoC_2020
     {
         static void Main(string[] args)
         {
-            var challenge1 = new Challenge1();
-            var res = challenge1.task1();
+            var asm = Assembly.GetExecutingAssembly();
+            var classes = asm.GetTypes().Where(p =>
+                 p.Namespace == "AoC_2020.Challenges" &&
+                 p.Name.Contains("Challenge")
+            ).ToList();
 
-            Console.WriteLine($"Challenge 1 task 1: {res}");
-            res = challenge1.task2();
+            foreach(var challenge in classes)
+            {
+                var c = Activator.CreateInstance(challenge) as Challenge;
+                var res = c.task1();
 
-            Console.WriteLine($"Challenge 1 task 2: {res}");
+                Console.WriteLine($"{challenge.Name} task 1: {res}");
+                res = c.task2();
+
+                Console.WriteLine($"{challenge.Name} task 2: {res}");
+            }
+
         }
     }
 }

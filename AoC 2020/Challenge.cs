@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace AoC_2020
 {
-    public class Challenge
+    public abstract class Challenge
     {
         public string[] input;
 
@@ -12,8 +12,11 @@ namespace AoC_2020
             string name = GetType().Name;
             Regex regex = new Regex(@"^Challenge(\d*)$");
             var res = regex.Match(name);
-            var fileName = $"challenges/{res.Groups[1]}/input.txt";
+            var fileName = $"inputs/{res.Groups[1]}/input.txt";
             input = File.ReadAllLines(fileName);
         }
+
+        public abstract int task1(); 
+        public abstract int task2();
     }
 }

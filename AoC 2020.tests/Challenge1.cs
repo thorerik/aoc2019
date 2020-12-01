@@ -17,7 +17,7 @@ namespace AoC_2020.tests
                 "675",
                 "1456"
             };
-            var c = new AoC_2020.Challenge1
+            var c = new AoC_2020.Challenges.Challenge1
             {
                 input = testItems
             };
@@ -37,7 +37,7 @@ namespace AoC_2020.tests
                 "675",
                 "1456"
             };
-            var c = new AoC_2020.Challenge1
+            var c = new AoC_2020.Challenges.Challenge1
             {
                 input = testItems
             };
