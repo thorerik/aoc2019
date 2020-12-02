@@ -12,7 +12,7 @@ namespace AoC_2020.Challenges
             var matches = 0;
             foreach(var password in input)
             {
-                Regex regex = new Regex(@"^(?<min>\d*)\s?\-\s?(?<max>\d*)\s(?<char>\w)\:\s(?<password>\w*)$");
+                var regex = new Regex(@"^(?<min>\d*)\s?\-\s?(?<max>\d*)\s(?<char>\w)\:\s(?<password>\w*)$");
                 var f = regex.Match(password);
 
                 var min = int.Parse(f.Groups["min"].Value);
@@ -41,7 +41,7 @@ namespace AoC_2020.Challenges
             var matches = 0;
             foreach (var password in input)
             {
-                Regex regex = new Regex(@"^(?<pos1>\d*)\s?\-\s?(?<pos2>\d*)\s(?<char>\w)\:\s(?<password>\w*)$");
+                var regex = new Regex(@"^(?<pos1>\d*)\s?\-\s?(?<pos2>\d*)\s(?<char>\w)\:\s(?<password>\w*)$");
                 var f = regex.Match(password);
 
                 var pos1 = int.Parse(f.Groups["pos1"].Value);
@@ -52,7 +52,9 @@ namespace AoC_2020.Challenges
                 if ((pass.Length > (pos1) || (pass.Length) < (pos1)) && pass[pos1 - 1] == character)
                 {
                     if(!(pass[pos2 - 1] == character))
+                    {
                         matches++;
+                    }
                 } else if(pass[pos2 - 1] == character)
                 { 
                    matches++;

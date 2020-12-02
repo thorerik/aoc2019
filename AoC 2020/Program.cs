@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
-using AoC_2020.Challenges;
 
 namespace AoC_2020
 {
@@ -9,6 +8,7 @@ namespace AoC_2020
     {
         static void Main(string[] args)
         {
+            var start = DateTime.Now;
             var asm = Assembly.GetExecutingAssembly();
             var classes = asm.GetTypes().Where(p =>
                  p.Namespace == "AoC_2020.Challenges" &&
@@ -25,7 +25,8 @@ namespace AoC_2020
 
                 Console.WriteLine($"{challenge.Name} task 2: {res}");
             }
-
+            var end = DateTime.Now;
+            Console.WriteLine($"Took: {end - start}");
         }
     }
 }
