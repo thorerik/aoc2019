@@ -5,9 +5,10 @@ namespace AoC_2020.tests
     [TestClass]
     public class Challenge1
     {
+        private Challenges.Challenge1 c;
 
-        [TestMethod]
-        public void TestTask1()
+        [TestInitialize]
+        public void Setup()
         {
             string[] testItems = {
                 "1721",
@@ -17,11 +18,15 @@ namespace AoC_2020.tests
                 "675",
                 "1456"
             };
-            var c = new AoC_2020.Challenges.Challenge1
+            c = new Challenges.Challenge1
             {
                 input = testItems
             };
+        }
 
+        [TestMethod]
+        public void TestTask1()
+        {
             var output = c.task1();
             Assert.AreEqual(514579, output);
         }
@@ -29,19 +34,6 @@ namespace AoC_2020.tests
         [TestMethod]
         public void TestTask2()
         {
-            string[] testItems = {
-                "1721",
-                "979",
-                "366",
-                "299",
-                "675",
-                "1456"
-            };
-            var c = new AoC_2020.Challenges.Challenge1
-            {
-                input = testItems
-            };
-
             var output = c.task2();
             Assert.AreEqual(241861950, output);
         }
