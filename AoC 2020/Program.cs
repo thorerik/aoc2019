@@ -17,13 +17,22 @@ namespace AoC_2020
 
             foreach(var challenge in classes)
             {
+                var runStart = DateTime.Now;
                 var c = Activator.CreateInstance(challenge) as Challenge;
+                
+                var taskStart = DateTime.Now;
                 var res = c.task1();
+                var taskEnd = DateTime.Now;
 
-                Console.WriteLine($"{challenge.Name} task 1: {res}");
+                Console.WriteLine($"{challenge.Name} task 1: {res} in {taskEnd - taskStart}");
+
+                taskStart = DateTime.Now;
                 res = c.task2();
+                taskEnd = DateTime.Now;
 
-                Console.WriteLine($"{challenge.Name} task 2: {res}");
+                Console.WriteLine($"{challenge.Name} task 2: {res} in {taskEnd - taskStart}");
+                var runEnd = DateTime.Now;
+                Console.WriteLine($"Challenge took: {runEnd - runStart}\n");
             }
             var end = DateTime.Now;
             Console.WriteLine($"Took: {end - start}");
