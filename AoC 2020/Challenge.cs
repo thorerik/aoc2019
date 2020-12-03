@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text.RegularExpressions;
 
 namespace AoC_2020
@@ -16,7 +17,7 @@ namespace AoC_2020
             input = File.ReadAllLines(fileName);
         }
 
-        public abstract int task1(); 
-        public abstract int task2();
+        public abstract ulong task1(); 
+        public abstract ulong task2();
     }
 }

@@ -6,14 +6,14 @@ namespace AoC_2020.Challenges
 {
     public class Challenge1 : Challenge
     {
-        public override int task1()
+        public override ulong task1()
         {
             foreach (var e1 in input)
             {
                 foreach (var e2 in input)
                 {
-                    var i1 = int.Parse(e1);
-                    var i2 = int.Parse(e2);
+                    var i1 = ulong.Parse(e1);
+                    var i2 = ulong.Parse(e2);
                     if (i1 + i2 == 2020)
                     {
                         return (i1 * i2);
@@ -22,7 +22,7 @@ namespace AoC_2020.Challenges
             }
             return 1;
         }
-        public override int task2()
+        public override ulong task2()
         {
             foreach (var e1 in input)
             {
@@ -30,9 +30,9 @@ namespace AoC_2020.Challenges
                 {
                     foreach(var e3 in input)
                     {
-                        var i1 = int.Parse(e1);
-                        var i2 = int.Parse(e2);
-                        var i3 = int.Parse(e3);
+                        var i1 = ulong.Parse(e1);
+                        var i2 = ulong.Parse(e2);
+                        var i3 = ulong.Parse(e3);
                         if (i1 + i2 + i3 == 2020)
                         {
                             return (i1 * i2 * i3);
