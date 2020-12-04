@@ -7,9 +7,9 @@ namespace AoC_2020.Challenges
 {
     public class Challenge2 : Challenge
     {
-        public override ulong task1()
+        public override long task1()
         {
-            ulong matches = 0;
+            long matches = 0;
             foreach(var password in input)
             {
                 var regex = new Regex(@"^(?<min>\d*)\s?\-\s?(?<max>\d*)\s(?<char>\w)\:\s(?<password>\w*)$");
@@ -36,9 +36,9 @@ namespace AoC_2020.Challenges
             }
             return matches;
         }
-        public override ulong task2()
+        public override long task2()
         {
-            ulong matches = 0;
+            long matches = 0;
             foreach (var password in input)
             {
                 var regex = new Regex(@"^(?<pos1>\d*)\s?\-\s?(?<pos2>\d*)\s(?<char>\w)\:\s(?<password>\w*)$");

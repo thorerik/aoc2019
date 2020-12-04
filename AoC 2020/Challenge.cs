@@ -17,7 +17,7 @@ namespace AoC_2020
             input = File.ReadAllLines(fileName);
         }
 
-        public abstract ulong task1(); 
-        public abstract ulong task2();
+        public abstract long task1(); 
+        public abstract long task2();
     }
 }

@@ -7,11 +7,11 @@ namespace AoC_2020.Challenges
 {
     public class Challenge3 : Challenge
     {
-        public override ulong task1()
+        public override long task1()
         {
             var x = 0;
             var y = 1;
-            ulong total = 0;
+            long total = 0;
 
             for (; y < input.Length; y += 1)
             {
@@ -28,9 +28,9 @@ namespace AoC_2020.Challenges
 
             return total;
         }
-        public override ulong task2()
+        public override long task2()
         {
-            ulong product = 1;
+            long product = 1;
             var steps = new Dictionary<int, List<int>>
             {
                 { 1, new List<int>{1,1} },
@@ -41,7 +41,7 @@ namespace AoC_2020.Challenges
             };
             foreach(var step in steps)
             {
-                ulong total = 0;
+                long total = 0;
                 var x = 0;
                 var y = step.Value[1];
 

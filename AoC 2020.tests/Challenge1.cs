@@ -29,14 +29,14 @@ namespace AoC_2020.tests
         public void TestTask1()
         {
             var output = c.task1();
-            Assert.AreEqual((ulong)514579, output);
+            Assert.AreEqual((long)514579, output);
         }
 
         [TestMethod]
         public void TestTask2()
         {
             var output = c.task2();
-            Assert.AreEqual((ulong)241861950, output);
+            Assert.AreEqual((long)241861950, output);
         }
     }
 }
