@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace AoC_2020.Challenges
 {
@@ -36,8 +37,8 @@ namespace AoC_2020.Challenges
         }
         public override long task2()
         {
-            v.Sort(); // sorting and just looping is faster than using Linq
-            for(var current = v[0]; current < v[v.Count-1]; current++)
+            var max = v.Max();
+            for(var current = v.Min(); current < max; current++)
             {
                 var previous = current - 1;
                 var next = current + 1;
