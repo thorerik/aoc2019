@@ -40,9 +40,7 @@ namespace AoC_2020.Challenges
             var max = v.Max();
             for(var current = v.Min(); current < max; current++)
             {
-                var previous = current - 1;
-                var next = current + 1;
-                if (v.Contains(previous) && v.Contains(next) && !v.Contains(current))
+                if (v.Contains(current - 1) && v.Contains(current + 1) && !v.Contains(current))
                 {
                     return current;
                 }
