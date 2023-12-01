@@ -9,8 +9,8 @@ class Day1
         $input = file_get_contents(__DIR__ . '/../input/Day1.txt');
         $input = explode("\n", $input);
 
-        echo $this->part1($input);
-        echo $this->part2($input);
+        echo "\tPart 1 -> " . $this->part1($input) . "\n";
+        echo "\tPart 2 -> " . $this->part2($input) . "\n";
     }
 
     public function part1(array $input): int

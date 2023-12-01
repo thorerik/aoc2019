@@ -9,5 +9,7 @@ $finder->files()->in(__DIR__ . '/src')->name('Day*.php');
 foreach ($finder as $file) {
     $class = 'Thor\\Aoc2023\\' . $file->getBasename('.php');
     $day = new $class();
+    echo $class . "\n";
     $day->run();
+    echo "\n";
 }
