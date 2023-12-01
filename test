@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+
+// Execute pest to run the tests
+$command = 'vendor/bin/pest --colors=always ';
+
+$output = shell_exec($command);
+
+echo $output;
