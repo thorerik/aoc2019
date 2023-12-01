@@ -1,0 +1,25 @@
+{
+    "name": "thor/aoc2023",
+    "type": "project",
+    "require-dev": {
+        "pestphp/pest": "^2.26"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Thor\\Aoc2023\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Thor Erik Lie",
+            "email": "thor@thorerik.com"
+        }
+    ],
+    "require": {},
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

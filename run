@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+// find all Classes in src/Day*.php and execute the run() method
+$finder = new Symfony\Component\Finder\Finder();
+$finder->files()->in(__DIR__ . '/src')->name('Day*.php');
+foreach ($finder as $file) {
+    $class = 'Thor\\Aoc2023\\' . $file->getBasename('.php');
+    $day = new $class();
+    $day->run();
+}
